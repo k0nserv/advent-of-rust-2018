@@ -2,17 +2,31 @@
 
 My implementation of the [Advent of Code](https://adventofcode.com/) puzzles for the 2018 year edition of course in [Rust](https://rust-lang.org/).
 
+## Instructions
+
+### Running all tests
+
+```bash
+cargo test
+```
+
+### Runnin a single day
+
+```bash
+cargo test day01
+```
+
 ## Days
 
-+ [Day 1](src/day1.rs)
-+ [Day 2](src/day2.rs)
-+ [Day 3](src/day3.rs)
-+ [Day 4](src/day4.rs)
-+ [Day 5](src/day5.rs)
-+ [Day 6](src/day6.rs)
-+ [Day 7](src/day7.rs)
-+ [Day 8](src/day8.rs)
-+ [Day 9](src/day9.rs)
++ [Day 1](src/day01.rs)
++ [Day 2](src/day02.rs)
++ [Day 3](src/day03.rs)
++ [Day 4](src/day04.rs)
++ [Day 5](src/day05.rs)
++ [Day 6](src/day06.rs)
++ [Day 7](src/day07.rs)
++ [Day 8](src/day08.rs)
++ [Day 9](src/day09.rs)
 + [Day 10](src/day10.rs)
 + [Day 11](src/day11.rs)
 + [Day 12](src/day12.rs)

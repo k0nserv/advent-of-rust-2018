@@ -1,4 +1,12 @@
-mod day1;
+mod day01;
+mod day02;
+mod day03;
+mod day04;
+mod day05;
+mod day06;
+mod day07;
+mod day08;
+mod day09;
 mod day10;
 mod day11;
 mod day12;
@@ -9,19 +17,11 @@ mod day16;
 mod day17;
 mod day18;
 mod day19;
-mod day2;
 mod day20;
 mod day21;
 mod day22;
 mod day23;
 mod day24;
-mod day3;
-mod day4;
-mod day5;
-mod day6;
-mod day7;
-mod day8;
-mod day9;
 
 #[cfg(test)]
 mod tests {
@@ -38,7 +38,7 @@ mod tests {
 
     #[test]
     fn solve_day1() {
-        use day1::{star_one, star_two};
+        use day01::{star_one, star_two};
 
         let input = load_file("day1.txt");
 
@@ -47,7 +47,7 @@ mod tests {
     }
     #[test]
     fn solve_day2() {
-        use day2::{star_one, star_two};
+        use day02::{star_one, star_two};
 
         let input = load_file("day2.txt");
 
@@ -56,7 +56,7 @@ mod tests {
     }
     #[test]
     fn solve_day3() {
-        use day3::{star_one, star_two};
+        use day03::{star_one, star_two};
 
         let input = load_file("day3.txt");
 
@@ -65,7 +65,7 @@ mod tests {
     }
     #[test]
     fn solve_day4() {
-        use day4::{star_one, star_two};
+        use day04::{star_one, star_two};
 
         let input = load_file("day4.txt");
 
@@ -74,7 +74,7 @@ mod tests {
     }
     #[test]
     fn solve_day5() {
-        use day5::{star_one, star_two};
+        use day05::{star_one, star_two};
 
         let input = load_file("day5.txt");
 
@@ -83,7 +83,7 @@ mod tests {
     }
     #[test]
     fn solve_day6() {
-        use day6::{star_one, star_two};
+        use day06::{star_one, star_two};
 
         let input = load_file("day6.txt");
 
@@ -92,7 +92,7 @@ mod tests {
     }
     #[test]
     fn solve_day7() {
-        use day7::{star_one, star_two};
+        use day07::{star_one, star_two};
 
         let input = load_file("day7.txt");
 
@@ -101,7 +101,7 @@ mod tests {
     }
     #[test]
     fn solve_day8() {
-        use day8::{star_one, star_two};
+        use day08::{star_one, star_two};
 
         let input = load_file("day8.txt");
 
@@ -110,7 +110,7 @@ mod tests {
     }
     #[test]
     fn solve_day9() {
-        use day9::{star_one, star_two};
+        use day09::{star_one, star_two};
 
         let input = load_file("day9.txt");
 
