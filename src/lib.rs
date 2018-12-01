@@ -37,13 +37,13 @@ mod tests {
     }
 
     #[test]
-    fn solve_day1() {
+    fn solve_day01() {
         use day01::{star_one, star_two};
 
         let input = load_file("day1.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&input), 510);
+        assert_eq!(star_two(&input), 69074);
     }
     #[test]
     fn solve_day2() {
