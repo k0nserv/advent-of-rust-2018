@@ -24,11 +24,10 @@ pub fn star_two(input: &str) -> i64 {
         let instruction = instructions[idx % instructions.len()];
         current_value += instruction;
 
-        if seen_frequencies.contains(&current_value) {
+        if !seen_frequencies.insert(current_value) {
             break current_value;
         }
 
-        seen_frequencies.insert(current_value);
         idx += 1;
     }
 }
