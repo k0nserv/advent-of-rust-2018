@@ -9,7 +9,7 @@ fn parse<'a>(input: &'a str) -> impl Iterator<Item = i64> + 'a {
 }
 
 pub fn star_one(input: &str) -> i64 {
-    parse(input).fold(0, |acc, x| acc + x)
+    parse(input).sum()
 }
 
 pub fn star_two(input: &str) -> i64 {
