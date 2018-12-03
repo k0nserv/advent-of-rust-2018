@@ -1,4 +1,6 @@
 #![allow(dead_code)]
+extern crate regex;
+
 mod day01;
 mod day02;
 mod day03;
@@ -56,13 +58,13 @@ mod tests {
         assert_eq!(star_two(&input), "cypueihajytordkgzxfqplbwn");
     }
     #[test]
-    fn solve_day3() {
+    fn solve_day03() {
         use day03::{star_one, star_two};
 
         let input = load_file("day3.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&input), 110891);
+        assert_eq!(star_two(&input), 297);
     }
     #[test]
     fn solve_day4() {
