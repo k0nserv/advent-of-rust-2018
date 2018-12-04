@@ -2,6 +2,10 @@ use std::collections::{HashMap, HashSet};
 
 use regex::Regex;
 
+lazy_static! {
+    static ref PATTERN: Regex = Regex::new(r"#\s*(\d+)\s*@\s*(\d+),(\d+):\s*(\d+)x(\d+)").unwrap();
+}
+
 #[derive(Debug, Eq, PartialEq)]
 pub struct Claim {
     id: usize,
@@ -23,8 +27,7 @@ impl Claim {
     }
 
     pub fn from_string(input: &str) -> Self {
-        let pattern = Regex::new(r"#\s*(\d+)\s*@\s*(\d+),(\d+):\s*(\d+)x(\d+)").unwrap();
-        let groups = pattern.captures(input).unwrap();
+        let groups = PATTERN.captures(input).unwrap();
 
         Self {
             id: groups[1].parse::<usize>().expect("Expected an id"),

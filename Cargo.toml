@@ -5,4 +5,5 @@ authors = ["Hugo Tunius <h@tunius.se>"]
 
 [dependencies]
 regex = "1"
+lazy_static = "1.2.0"
 

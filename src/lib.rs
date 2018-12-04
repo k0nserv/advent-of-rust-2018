@@ -1,5 +1,9 @@
 #![allow(dead_code)]
+
 extern crate regex;
+
+#[macro_use]
+extern crate lazy_static;
 
 mod day01;
 mod day02;
@@ -67,13 +71,13 @@ mod tests {
         assert_eq!(star_two(&input), 297);
     }
     #[test]
-    fn solve_day4() {
+    fn solve_day04() {
         use day04::{star_one, star_two};
 
         let input = load_file("day4.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&input), 19874);
+        assert_eq!(star_two(&input), 22687);
     }
     #[test]
     fn solve_day5() {
