@@ -113,10 +113,6 @@ fn parse(input: &str) -> Vec<Rc<RefCell<Step>>> {
         }
     });
 
-    // for step in steps.values_mut() {
-    //     step.borrow_mut().sort_required_by();
-    // }
-
     steps.values().for_each(|value| {
         let requires_count = steps.values().fold(0, |acc, other_value| {
             if value == other_value {
@@ -141,12 +137,10 @@ fn parse(input: &str) -> Vec<Rc<RefCell<Step>>> {
 
     firsts
 }
-// EHFLWMTKQBAPGIVXSZJRDUYONC
 
 pub fn star_one(input: &str) -> String {
     let mut first_steps = parse(input);
     first_steps.sort_by(|a, b| b.cmp(a));
-    // first_step.borrow_mut().unlock();
     let mut stack = vec![];
     for step in first_steps {
         stack.push(step);
@@ -174,7 +168,6 @@ pub fn star_one(input: &str) -> String {
 pub fn star_two(input: &str, num_workers: usize, base_time: usize) -> i64 {
     let mut first_steps = parse(input);
     first_steps.sort_by(|a, b| b.cmp(a));
-    // first_step.borrow_mut().unlock();
     let mut stack = vec![];
     for step in first_steps {
         stack.push(step);
@@ -227,7 +220,6 @@ pub fn star_two(input: &str, num_workers: usize, base_time: usize) -> i64 {
             busy_counters[*id] = (Some(Rc::clone(&next)), work_time);
         });
 
-        // println!("Second {}, workers: {:?}", time_taken, busy_counters);
         time_taken += 1;
     }
 
