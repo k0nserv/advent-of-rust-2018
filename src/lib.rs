@@ -116,13 +116,11 @@ mod tests {
         assert_eq!(star_two(&input), 1);
     }
     #[test]
-    fn solve_day9() {
-        use day09::{star_one, star_two};
+    fn solve_day09() {
+        use day09::solve_efficient;
 
-        let input = load_file("day9.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(solve_efficient(424, 71144), 405143);
+        assert_eq!(solve_efficient(424, 71144 * 100), 3411514667);
     }
     #[test]
     fn solve_day10() {
