@@ -107,13 +107,13 @@ mod tests {
         assert_eq!(star_two(&input, 5, 60), 1056);
     }
     #[test]
-    fn solve_day8() {
+    fn solve_day08() {
         use day08::{star_one, star_two};
 
         let input = load_file("day8.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&input), 40977);
+        assert_eq!(star_two(&input), 27490);
     }
     #[test]
     fn solve_day09() {
