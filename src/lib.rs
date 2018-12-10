@@ -127,9 +127,9 @@ mod tests {
         use day10::{star_one, star_two};
 
         let input = load_file("day10.txt");
+        let expected = load_file("day10_expected.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&input, 10081), expected.trim());
     }
     #[test]
     fn solve_day11() {
