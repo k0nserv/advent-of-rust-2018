@@ -124,7 +124,7 @@ mod tests {
     }
     #[test]
     fn solve_day10() {
-        use day10::{star_one, star_two};
+        use day10::star_one;
 
         let input = load_file("day10.txt");
         let expected = load_file("day10_expected.txt");
@@ -135,10 +135,8 @@ mod tests {
     fn solve_day11() {
         use day11::{star_one, star_two};
 
-        let input = load_file("day11.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(2568, 300, 3), (21, 68));
+        assert_eq!(star_two(2568, 300), (90, 201, 15));
     }
     #[test]
     fn solve_day12() {

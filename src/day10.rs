@@ -123,7 +123,7 @@ pub fn star_one(input: &str, ticks: usize) -> String {
 
 #[cfg(test)]
 mod tests {
-    use super::{star_one, star_two};
+    use super::star_one;
     static EXAMPLE: &str = "position=< 9,  1> velocity=< 0,  2>
 position=< 7,  0> velocity=<-1,  0>
 position=< 3, -2> velocity=<-1,  1>
