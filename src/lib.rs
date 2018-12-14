@@ -142,10 +142,14 @@ mod tests {
     fn solve_day12() {
         use day12::{star_one, star_two};
 
-        let input = load_file("day12.txt");
+        let initial_state = load_file("day12_initial_state.txt");
+        let rules = load_file("day12_rules.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&initial_state, &rules, 3, 20), 2281);
+        assert_eq!(
+            star_two(&initial_state, &rules, 3, 50_000_000_000),
+            2250000000120
+        );
     }
     #[test]
     fn solve_day13() {
