@@ -164,10 +164,8 @@ mod tests {
     fn solve_day14() {
         use day14::{star_one, star_two};
 
-        let input = load_file("day14.txt");
-
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(635041), String::from("1150511382"));
+        assert_eq!(star_two(&[6, 3, 5, 0, 4, 1]), 20173656);
     }
     #[test]
     fn solve_day15() {
