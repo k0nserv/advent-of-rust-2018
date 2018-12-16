@@ -415,19 +415,16 @@ impl GameState {
 
                 let distance_grid = potential_distance_grid.unwrap();
 
-                let possible_target_locations: Vec<Location> = possible_targets
+                let mut possible_targets_with_distance = possible_targets
                     .iter()
                     .flat_map(|(enemy_location, _)| self.in_range(enemy_location, true))
-                    .collect::<Vec<_>>();
-
-                let mut possible_targets_with_distance = possible_target_locations
-                    .into_iter()
                     .flat_map(|target_location| {
                         match distance_grid[target_location.1][target_location.0] {
                             None => None,
                             Some(distance) => Some((target_location, distance)),
                         }
                     }).collect::<Vec<(Location, usize)>>();
+
                 if possible_targets_with_distance.is_empty() {
                     continue;
                 }
