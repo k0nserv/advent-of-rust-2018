@@ -184,8 +184,13 @@ mod tests {
     fn solve_day14() {
         use day14::{star_one, star_two};
 
-        assert_eq!(star_one(635041), String::from("1150511382"));
-        assert_eq!(star_two(&[6, 3, 5, 0, 4, 1]), 20173656);
+        time("Day 14 part 1", || {
+            assert_eq!(star_one(635041), String::from("1150511382"));
+        });
+
+        time("Day 14 part 2", || {
+            assert_eq!(star_two(&[6, 3, 5, 0, 4, 1]), 20173656);
+        });
     }
     #[test]
     fn solve_day15() {
