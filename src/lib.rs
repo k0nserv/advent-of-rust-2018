@@ -1,5 +1,7 @@
 #![allow(dead_code)]
 
+use std::time::{SystemTime, UNIX_EPOCH};
+
 extern crate regex;
 
 #[macro_use]
@@ -30,8 +32,26 @@ mod day22;
 mod day23;
 mod day24;
 
+fn time<F>(label: &str, closure: F)
+where
+    F: Fn(),
+{
+    let start = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
+    closure();
+    let end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
+    let time = end - start;
+    println!(
+        "Time taken for {}: {}s and {}ns",
+        label,
+        time.as_secs(),
+        time.subsec_nanos()
+    );
+}
+
 #[cfg(test)]
 mod tests {
+    use super::time;
+
     use std::fs::File;
     use std::io::Read;
 
@@ -173,8 +193,13 @@ mod tests {
 
         let input = load_file("day15.txt");
 
-        assert_eq!(star_one(&input), 248235);
-        assert_eq!(star_two(&input), 46784);
+        time("Day 15 Star 1", || {
+            assert_eq!(star_one(&input), 248235);
+        });
+
+        time("Day 15 Star 2", || {
+            assert_eq!(star_two(&input), 46784);
+        });
     }
     #[test]
     fn solve_day16() {

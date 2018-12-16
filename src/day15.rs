@@ -571,13 +571,6 @@ pub fn star_two(input: &str) -> usize {
         }).skip_while(|(_, _, turn_result, _)| turn_result == &UnitType::Goblin)
         .nth(0)
         .unwrap();
-;
-
-    println!("{:?}", final_state.as_ref().unwrap());
-    println!(
-        "Elves win with adjusted strength: {} after {} turns",
-        adjusted_strength, completed_turns
-    );
 
     completed_turns * final_state
         .unwrap()
