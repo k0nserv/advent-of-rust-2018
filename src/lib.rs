@@ -210,10 +210,11 @@ mod tests {
     fn solve_day16() {
         use day16::{star_one, star_two};
 
-        let input = load_file("day16.txt");
+        let observations = load_file("day16_observations.txt");
+        let program = load_file("day16_example_program.txt");
 
-        assert_eq!(star_one(&input), 1);
-        assert_eq!(star_two(&input), 1);
+        assert_eq!(star_one(&observations), 596);
+        assert_eq!(star_two(&observations, &program), 554);
     }
     #[test]
     fn solve_day17() {
